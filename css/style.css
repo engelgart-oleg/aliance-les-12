@@ -145,7 +145,7 @@ body {
   bottom: -1px;
   background-color: #5C8EE5;
   transform: scaleX(0);
-  transition: all 0.2s ease;
+  transition: transform 0.2s;
 }
 .header-nav-link:hover::after {
   transform: scaleX(1);
@@ -228,7 +228,6 @@ body {
   min-height: 10.5rem;
 
   display: flex;
-  /* flex-wrap: wrap; */
 
   padding: 0;
   margin-top: 6.1875rem;
@@ -240,7 +239,6 @@ body {
 }
 .header-features-item {
   max-width: 99.9%;
-  /* min-width: 17rem; */
   height: auto;
   padding: 1.875rem 3.125rem .625rem 3.125rem;
   border: 1px solid rgba(235, 235, 240, 0.2);
@@ -375,7 +373,7 @@ body {
   height: 1px;
   background-color: #5c8ee5;
   margin-right: 1.25rem;
-  transition: all 0.2s ease;
+  transition: width 0.2s;
 }
 .steps-link:hover::before {
   width: 3.75rem;
@@ -395,7 +393,7 @@ body {
   border: 1px solid #ebebf0;
   text-decoration: none;
   position: relative;
-  transition: all 0.9s ease;
+  transition: border-color 0.9s;
 }
 .card:hover .card-title {
   color: #5c8ee5;
@@ -413,7 +411,7 @@ body {
   line-height: 160%;
   color: #292d33;
   margin: 0;
-  transition: all 0.2s ease;
+  transition: color 0.2s;
 }
 .card-text {
   font-weight: 400;
@@ -432,20 +430,50 @@ body {
 
 
 
+/*************** trademarks ***************/
+.trademarks-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.trademarks-card {
+  flex-basis: 50%;
+  position: relative;
+  padding: 50px;
+  height: 280px;  
+  display: flex;
+  align-items: center;
+  min-height: 280px;
+  height: auto;
+}
 
+.trademarks-icon {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  left: 30px;
+  top: 50px;
+  fill: #828A99;
+  transition: fill 0.2s;
+}
 
+.trademarks-card:hover .trademarks-icon {
+  fill: #5C8EE6;
+}
 
+.trademarks-content {
+  padding: 0;
+  margin: 0;
+  margin-left: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-evenly;
+}
 
-
-
-
-
-
-
-
-
-
+.trademarks-text {
+  margin: 0;
+}
 
 
 
@@ -489,8 +517,6 @@ body {
   
 }
 
-
-
 @media (max-width: 1200px) {
   .container {
     max-width: 72rem;
@@ -526,8 +552,14 @@ body {
     flex-basis: 50%;
   }
 
-}
+  .trademarks-cards {
+    flex-direction: column;
+  }
+  .trademarks-card {
+    padding: 30px;
+  }
 
+}
 
 @media (max-width: 1024px) {
   .container {
@@ -535,8 +567,6 @@ body {
   }
 
 }
-
-
 
 @media (max-width: 992px) {
   html {
@@ -697,8 +727,6 @@ body {
   
 }
 
-
-
 @media (max-width: 768px) {
   .container {
     max-width: 50rem;
@@ -722,10 +750,21 @@ body {
   .card {
     flex-basis: 100%;
   }
+  
+  .trademarks-icon {
+    width: 100px;
+    height: 100px;
+    left: 20px;
+  }
+  .trademarks-content {
+    gap: 94px;
+    margin-left: 0;
+  }
+  .trademarks-title {
+    align-self: center;
+  }
 
 }
-
-
 
 @media (max-width: 576px) {
   .container {
@@ -754,14 +793,33 @@ body {
     max-width: 90%;
   }
 
+   .trademarks-title {
+    align-self: flex-end;
+  }
+
 }
 
 @media (max-width: 480px) {
   .card-content {
     margin-bottom: 250px;
   }
+  .card-title {
+    font-size: 1.25rem;
+  }
+  .card-text {
+    font-size: .875rem;
+  }
+
+   .trademarks-card {
+    padding-right: 10px;
+  }
+  .trademarks-content {
+    margin-bottom: 0;
+  }
+  .trademarks-title {
+    max-width: 155px;
+  }
 }
 
-@media (max-width: 320px) {
-  
+@media (max-width: 320px) { 
 }
