@@ -271,7 +271,7 @@ body {
 
 /*************** SECTION-LIGHT ***************/
 .section {
-  margin: 9.375rem 0;
+  margin: 8.375rem 0;
 }
 .section-container {
   padding-left: .5625rem;
@@ -282,7 +282,7 @@ body {
   line-height: 120%;
   color: #292d33;
   margin-top: 1.5rem;
-  margin-bottom: 3.3125rem;
+  margin-bottom: 2.3125rem;
 }
 
 .steps-slider {
@@ -293,7 +293,6 @@ body {
 
 .steps {
   display: flex;
-  justify-content: space-between;
   gap: 1.875rem;
   list-style: none;
   padding: 0;
@@ -383,17 +382,26 @@ body {
 
 /*************** production ***************/
 .production {
+  margin: -7px 0;
+}
+.production-container {
+  padding-left: 7px;
+}
+.production-title {
+  letter-spacing: 0.4px;
+  margin-bottom: 3.5rem;
 }
 .cards {
   display: flex;
   flex-wrap: wrap;
 }
 .card {
-  flex-basis: 33%;
+  flex-basis: 33.333%;
   border: 1px solid #ebebf0;
   text-decoration: none;
   position: relative;
   transition: border-color 0.9s;
+  height: 593px;
 }
 .card:hover .card-title {
   color: #5c8ee5;
@@ -418,6 +426,8 @@ body {
   font-size: 1rem;
   line-height: 160%;
   color: #828a99; 
+  margin: 0;
+  margin-top: 10px;
 }
 .card-image {
   width: 90%;
@@ -431,6 +441,17 @@ body {
 
 
 /*************** trademarks ***************/
+.trademarks {
+  margin: 9.8125rem 0;
+}
+.trademarks-container {
+  padding-left: 8px;
+}
+.trademarks-section-title {
+  margin-top: 24px;
+  margin-bottom: 3.5rem;
+
+}
 .trademarks-cards {
   display: flex;
   flex-wrap: wrap;
@@ -451,7 +472,7 @@ body {
   width: 180px;
   height: 180px;
   position: absolute;
-  left: 30px;
+  left: 50px;
   top: 50px;
   fill: #828A99;
   transition: fill 0.2s;
@@ -463,8 +484,9 @@ body {
 
 .trademarks-content {
   padding: 0;
-  margin: 0;
-  margin-left: 210px;
+  /* margin: 0; */
+  margin-left: 230px;
+  margin-bottom: 18px;
   display: flex;
   flex-direction: column;
   gap: 10px;
